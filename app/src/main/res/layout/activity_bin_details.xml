@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
@@ -17,7 +15,7 @@
             android:textColor="@color/peach"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Number"
+            android:text="@string/number"
             android:layout_gravity="center"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
@@ -36,7 +34,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Lenght"
+                android:text="@string/length"
                 android:layout_columnWeight=".7"
                 />
             <TextView
@@ -44,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
                 android:layout_marginEnd="16dp"
-                android:text="Lenght data"
+                android:text="@string/length_data"
                 android:layout_columnWeight="1"
                 />
             <TextView
@@ -52,14 +50,14 @@
                 android:layout_width="0dp"
                 android:layout_marginStart="16dp"
                 android:layout_height="wrap_content"
-                android:text="Luhn"
+                android:text="@string/luhn"
                 android:layout_columnWeight=".7"
                 />
             <TextView
                 android:id="@+id/luhn_data"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Luhn data"
+                android:text="@string/luhn_data"
                 android:layout_columnWeight="1"
                 />
 
@@ -89,14 +87,14 @@
                 android:layout_width="0dp"
                 android:layout_marginStart="16dp"
                 android:layout_height="wrap_content"
-                android:text="Scheme"
+                android:text="@string/scheme"
                 android:layout_columnWeight=".7"
                 />
             <TextView
                 android:id="@+id/scheme_data"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Scheme data"
+                android:text="@string/scheme_data"
                 android:layout_columnWeight="1"
                 />
 <!--            scheme end-->
@@ -127,14 +125,14 @@
                 android:layout_marginStart="16dp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Type"
+                android:text="@string/type"
                 android:layout_columnWeight=".7"
                 />
             <TextView
                 android:id="@+id/type_data"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Type data"
+                android:text="@string/type_data"
                 android:layout_columnWeight="1"
                 />
 <!--            type end-->
@@ -165,14 +163,14 @@
                 android:layout_width="0dp"
                 android:layout_marginStart="16dp"
                 android:layout_height="wrap_content"
-                android:text="Brand"
+                android:text="@string/brand"
                 android:layout_columnWeight=".7"
                 />
             <TextView
                 android:id="@+id/brand_data"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Brand data"
+                android:text="@string/brand_data"
                 android:layout_columnWeight="1"
                 />
 <!--            brand end-->
@@ -201,14 +199,14 @@
                 android:layout_width="0dp"
                 android:layout_marginStart="16dp"
                 android:layout_height="wrap_content"
-                android:text="Prepaid"
+                android:text="@string/prepaid"
                 android:layout_columnWeight=".7"
                 />
             <TextView
                 android:id="@+id/prepaid_data"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Prepaid data"
+                android:text="@string/prepaid_data"
                 android:layout_columnWeight="1"
                 />
 <!--            prepaid end-->
@@ -240,7 +238,7 @@
             android:id="@+id/txt_country_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Country"
+            android:text="@string/country"
             android:layout_gravity="center"
             android:layout_marginBottom="8dp"
             />
@@ -256,7 +254,7 @@
                 android:layout_width="0dp"
                 android:layout_marginStart="16dp"
                 android:layout_height="wrap_content"
-                android:text="Numeric"
+                android:text="@string/numeric"
                 android:layout_columnWeight=".7"
                 />
             <TextView
@@ -264,7 +262,7 @@
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
                 android:layout_marginEnd="16dp"
-                android:text="Numeric data"
+                android:text="@string/numeric_data"
                 android:layout_columnWeight="1"
                 />
 
@@ -273,14 +271,14 @@
                 android:layout_width="0dp"
                 android:layout_marginStart="16dp"
                 android:layout_height="wrap_content"
-                android:text="Alpa2"
+                android:text="@string/alpha2"
                 android:layout_columnWeight=".7"
                 />
             <TextView
                 android:id="@+id/alpha2_data"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Alpha2 data"
+                android:text="@string/alpha2_data"
                 android:layout_columnWeight="1"
                 />
 
@@ -289,14 +287,14 @@
                 android:layout_width="0dp"
                 android:layout_marginStart="16dp"
                 android:layout_height="wrap_content"
-                android:text="Name"
+                android:text="@string/name"
                 android:layout_columnWeight=".7"
                 />
             <TextView
                 android:id="@+id/country_name_data"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Name data"
+                android:text="@string/name_data"
                 android:layout_columnWeight="1"
                 />
 
@@ -305,14 +303,14 @@
                 android:layout_width="0dp"
                 android:layout_marginStart="16dp"
                 android:layout_height="wrap_content"
-                android:text="Emoji"
+                android:text="@string/emoji"
                 android:layout_columnWeight=".7"
                 />
             <TextView
                 android:id="@+id/emoji_data"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Emoji data"
+                android:text="@string/emoji_data"
                 android:layout_columnWeight="1"
                 />
 
@@ -321,14 +319,14 @@
                 android:layout_marginStart="16dp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Currency"
+                android:text="@string/currency"
                 android:layout_columnWeight=".7"
                 />
             <TextView
                 android:id="@+id/currency_data"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="currency data"
+                android:text="@string/currency_data"
                 android:layout_columnWeight="1"
                 />
 
@@ -337,13 +335,13 @@
                 android:layout_width="0dp"
                 android:layout_marginStart="16dp"
                 android:layout_height="wrap_content"
-                android:text="Latitude"
+                android:text="@string/latitude"
                 android:layout_columnWeight=".7"
                 />
             <TextView
                 android:id="@+id/latitude_data"
                 android:layout_height="wrap_content"
-                android:text="latitude data"
+                android:text="@string/latitude_data"
                 android:textColor="@color/blue"
                 android:layout_columnWeight="1"
                 />
@@ -353,14 +351,14 @@
                 android:layout_width="0dp"
                 android:layout_marginStart="16dp"
                 android:layout_height="wrap_content"
-                android:text="Longitude"
+                android:text="@string/longitude"
                 android:layout_columnWeight=".7"
                 />
             <TextView
                 android:id="@+id/longitude_data"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="longitude data"
+                android:text="@string/longitude_data"
                 android:textColor="@color/blue"
                 android:layout_columnWeight="1"
                 />
@@ -391,7 +389,7 @@
             android:id="@+id/txt_bank_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bank"
+            android:text="@string/bank"
             android:layout_gravity="center"
             android:layout_marginBottom="8dp"
             />
@@ -407,7 +405,7 @@
                 android:layout_width="0dp"
                 android:layout_marginStart="16dp"
                 android:layout_height="wrap_content"
-                android:text="Name"
+                android:text="@string/bank_name"
                 android:layout_columnWeight=".7"
                 />
             <TextView
@@ -416,7 +414,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:layout_columnWeight="1"
-                android:text="Bank name"
+                android:text="@string/bank_name_data"
                 />
 
             <TextView
@@ -424,13 +422,13 @@
                 android:layout_marginStart="16dp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Url"
+                android:text="@string/url"
                 android:layout_columnWeight=".7"
                 />
             <TextView
                 android:id="@+id/bank_url_data"
                 android:layout_height="wrap_content"
-                android:text="url data"
+                android:text="@string/url_data"
                 android:textColor="@color/blue"
                 android:layout_columnWeight="1"
                 />
@@ -439,13 +437,13 @@
                 android:id="@+id/bank_phone_title"
                 android:layout_marginStart="16dp"
                 android:layout_height="wrap_content"
-                android:text="Phone"
+                android:text="@string/phone"
                 android:layout_columnWeight=".7"
                 />
             <TextView
                 android:id="@+id/bank_phone_data"
                 android:layout_height="wrap_content"
-                android:text="Phone"
+                android:text="@string/phone_data"
                 android:textColor="@color/blue"
                 android:layout_columnWeight="1"
                 />
@@ -454,13 +452,13 @@
                 android:id="@+id/bank_city_title"
                 android:layout_marginStart="16dp"
                 android:layout_height="wrap_content"
-                android:text="City"
+                android:text="@string/city"
                 android:layout_columnWeight=".7"
                 />
             <TextView
                 android:id="@+id/bank_city_data"
                 android:layout_height="wrap_content"
-                android:text="City data"
+                android:text="@string/city_data"
                 android:layout_columnWeight="1"
                 />
             <!---->
