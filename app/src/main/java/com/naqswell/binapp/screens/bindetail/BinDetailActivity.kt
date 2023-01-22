@@ -38,9 +38,7 @@ class BinDetailActivity : AppCompatActivity(), BinDetailViewMvc.Listener {
         if (URLUtil.isValidUrl(formattedUrl)) {
             val internetIntent = Intent(Intent.ACTION_VIEW)
             internetIntent.data = Uri.parse(formattedUrl)
-            internetIntent.resolveActivity(packageManager)?.let {
-                startActivity(intent)
-            }
+            startActivity(internetIntent)
         } else {
             Snackbar.make(
                 viewMvc.root,
