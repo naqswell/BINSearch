@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyApplication" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor" >@android:color/transparent</item>
+        <item name="cardBackgroundColor">@color/dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/peach</item>
+    </style>
+</resources>

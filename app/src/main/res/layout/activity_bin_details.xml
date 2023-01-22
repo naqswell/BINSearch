@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/peach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            />
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="4"
+            android:columnCount="2"
+            >
+
+            <TextView
+                android:id="@+id/length_title"
+                android:layout_marginStart="16dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Lenght"
+                android:layout_columnWeight=".7"
+                />
+            <TextView
+                android:id="@+id/length_data"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_marginEnd="16dp"
+                android:text="Lenght data"
+                android:layout_columnWeight="1"
+                />
+            <TextView
+                android:id="@+id/luhn_title"
+                android:layout_width="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_height="wrap_content"
+                android:text="Luhn"
+                android:layout_columnWeight=".7"
+                />
+            <TextView
+                android:id="@+id/luhn_data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Luhn data"
+                android:layout_columnWeight="1"
+                />
+
+<!---->
+            <View
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_columnWeight="1"
+                android:background="@color/dark"
+                />
+
+            <View
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_columnWeight="1"
+                android:background="@color/dark"
+                />
+<!--            -->
+
+<!--            scheme start-->
+            <TextView
+                android:id="@+id/scheme_title"
+                android:layout_width="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_height="wrap_content"
+                android:text="Scheme"
+                android:layout_columnWeight=".7"
+                />
+            <TextView
+                android:id="@+id/scheme_data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Scheme data"
+                android:layout_columnWeight="1"
+                />
+<!--            scheme end-->
+
+            <!---->
+            <View
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_columnWeight="1"
+                android:background="@color/dark"
+                />
+
+            <View
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_columnWeight="1"
+                android:background="@color/dark"
+                />
+            <!--            -->
+
+<!--            type start-->
+            <TextView
+                android:id="@+id/type_title"
+                android:layout_marginStart="16dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Type"
+                android:layout_columnWeight=".7"
+                />
+            <TextView
+                android:id="@+id/type_data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Type data"
+                android:layout_columnWeight="1"
+                />
+<!--            type end-->
+
+            <!---->
+            <View
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_columnWeight="1"
+                android:background="@color/dark"
+                />
+
+            <View
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_columnWeight="1"
+                android:background="@color/dark"
+                />
+            <!--            -->
+
+<!--            brand start-->
+            <TextView
+                android:id="@+id/brand_title"
+                android:layout_width="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_height="wrap_content"
+                android:text="Brand"
+                android:layout_columnWeight=".7"
+                />
+            <TextView
+                android:id="@+id/brand_data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Brand data"
+                android:layout_columnWeight="1"
+                />
+<!--            brand end-->
+            <!---->
+            <View
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_columnWeight="1"
+                android:background="@color/dark"
+                />
+
+            <View
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_columnWeight="1"
+                android:background="@color/dark"
+                />
+            <!--            -->
+<!--            prepaid start-->
+            <TextView
+                android:id="@+id/prepaid_title"
+                android:layout_width="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_height="wrap_content"
+                android:text="Prepaid"
+                android:layout_columnWeight=".7"
+                />
+            <TextView
+                android:id="@+id/prepaid_data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Prepaid data"
+                android:layout_columnWeight="1"
+                />
+<!--            prepaid end-->
+            <!---->
+            <View
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_columnWeight="1"
+                android:background="@color/dark"
+                />
+
+            <View
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_columnWeight="1"
+                android:background="@color/dark"
+                />
+            <!--            -->
+
+        </GridLayout>
+
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/peach"
+            android:id="@+id/txt_country_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Country"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="4"
+            android:columnCount="2">
+
+            <TextView
+                android:id="@+id/numeric_title"
+                android:layout_width="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_height="wrap_content"
+                android:text="Numeric"
+                android:layout_columnWeight=".7"
+                />
+            <TextView
+                android:id="@+id/numeric_data"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_marginEnd="16dp"
+                android:text="Numeric data"
+                android:layout_columnWeight="1"
+                />
+
+            <TextView
+                android:id="@+id/alpha2_title"
+                android:layout_width="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_height="wrap_content"
+                android:text="Alpa2"
+                android:layout_columnWeight=".7"
+                />
+            <TextView
+                android:id="@+id/alpha2_data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Alpha2 data"
+                android:layout_columnWeight="1"
+                />
+
+            <TextView
+                android:id="@+id/country_name_title"
+                android:layout_width="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:layout_columnWeight=".7"
+                />
+            <TextView
+                android:id="@+id/country_name_data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Name data"
+                android:layout_columnWeight="1"
+                />
+
+            <TextView
+                android:id="@+id/emoji_title"
+                android:layout_width="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_height="wrap_content"
+                android:text="Emoji"
+                android:layout_columnWeight=".7"
+                />
+            <TextView
+                android:id="@+id/emoji_data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Emoji data"
+                android:layout_columnWeight="1"
+                />
+
+            <TextView
+                android:id="@+id/currency_title"
+                android:layout_marginStart="16dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Currency"
+                android:layout_columnWeight=".7"
+                />
+            <TextView
+                android:id="@+id/currency_data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="currency data"
+                android:layout_columnWeight="1"
+                />
+
+            <TextView
+                android:id="@+id/latitude_title"
+                android:layout_width="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_height="wrap_content"
+                android:text="Latitude"
+                android:layout_columnWeight=".7"
+                />
+            <TextView
+                android:id="@+id/latitude_data"
+                android:layout_height="wrap_content"
+                android:text="latitude data"
+                android:textColor="@color/blue"
+                android:layout_columnWeight="1"
+                />
+
+            <TextView
+                android:id="@+id/longitude_title"
+                android:layout_width="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_height="wrap_content"
+                android:text="Longitude"
+                android:layout_columnWeight=".7"
+                />
+            <TextView
+                android:id="@+id/longitude_data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="longitude data"
+                android:textColor="@color/blue"
+                android:layout_columnWeight="1"
+                />
+            <!---->
+            <View
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_columnWeight="1"
+                android:background="@color/dark"
+                />
+
+            <View
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_columnWeight="1"
+                android:background="@color/dark"
+                />
+            <!--            -->
+        </GridLayout>
+
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/peach"
+            android:id="@+id/txt_bank_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bank"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="4"
+            android:columnCount="2">
+
+            <TextView
+                android:id="@+id/bank_name_title"
+                android:layout_width="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:layout_columnWeight=".7"
+                />
+            <TextView
+                android:id="@+id/bank_name_data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_columnWeight="1"
+                android:text="Bank name"
+                />
+
+            <TextView
+                android:id="@+id/bank_url_title"
+                android:layout_marginStart="16dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Url"
+                android:layout_columnWeight=".7"
+                />
+            <TextView
+                android:id="@+id/bank_url_data"
+                android:layout_height="wrap_content"
+                android:text="url data"
+                android:textColor="@color/blue"
+                android:layout_columnWeight="1"
+                />
+
+            <TextView
+                android:id="@+id/bank_phone_title"
+                android:layout_marginStart="16dp"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:layout_columnWeight=".7"
+                />
+            <TextView
+                android:id="@+id/bank_phone_data"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:textColor="@color/blue"
+                android:layout_columnWeight="1"
+                />
+
+            <TextView
+                android:id="@+id/bank_city_title"
+                android:layout_marginStart="16dp"
+                android:layout_height="wrap_content"
+                android:text="City"
+                android:layout_columnWeight=".7"
+                />
+            <TextView
+                android:id="@+id/bank_city_data"
+                android:layout_height="wrap_content"
+                android:text="City data"
+                android:layout_columnWeight="1"
+                />
+            <!---->
+            <View
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_columnWeight="1"
+                android:background="@color/dark"
+                />
+
+            <View
+                android:layout_height="2dp"
+                android:layout_width="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_columnWeight="1"
+                android:background="@color/dark"
+                />
+            <!--            -->
+        </GridLayout>
+
+    </LinearLayout>
+</ScrollView>
