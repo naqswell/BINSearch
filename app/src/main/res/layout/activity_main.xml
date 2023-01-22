@@ -52,13 +52,27 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvHistory"
                 app:layout_constraintTop_toBottomOf="@+id/txt_search_title"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/clear_history_bnt"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 />
-            >
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/clear_history_bnt"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                app:layout_constraintTop_toBottomOf="@+id/rvHistory"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="clear history"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 

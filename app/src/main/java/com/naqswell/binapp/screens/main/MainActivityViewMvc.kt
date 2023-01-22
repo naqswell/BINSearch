@@ -18,7 +18,8 @@ class MainActivityViewMvc(layoutInflater: LayoutInflater) :
     BaseViewMvc<MainActivityViewMvc.Listener>(layoutInflater) {
 
     interface Listener {
-        fun onSearchBtnClicked(bin: String)
+        fun onSearchBtnClicked(bin: Int)
+        fun onClearHistoryBtnClicked()
     }
 
     private val binding = ActivityMainBinding.inflate(layoutInflater)
@@ -28,8 +29,8 @@ class MainActivityViewMvc(layoutInflater: LayoutInflater) :
 
     init {
         binding.apply {
-            initBinCard(this)
-            initRecyclerView(this)
+            initBinCard()
+            initRecyclerView()
         }
     }
 
@@ -37,15 +38,26 @@ class MainActivityViewMvc(layoutInflater: LayoutInflater) :
         binAdapter.bindData(questions)
     }
 
-    private fun initRecyclerView(binding: ActivityMainBinding) {
+    private fun initRecyclerView() {
         with(binding) {
             rvHistory.layoutManager = LinearLayoutManager(context)
-            binAdapter = BinAdapter()
+            binAdapter = BinAdapter { clickedBin ->
+                for (listener in listeners) {
+                    listener.onSearchBtnClicked(clickedBin.bin)
+                    setBinEditTextData(clickedBin.bin)
+                }
+            }
             rvHistory.adapter = binAdapter
+
+            clearHistoryBnt.setOnClickListener {
+                for (listener in listeners) {
+                    listener.onClearHistoryBtnClicked()
+                }
+            }
         }
     }
 
-    private fun initBinCard(binding: ActivityMainBinding) {
+    private fun initBinCard() {
         with(binding) {
             binCard.apply {
 
@@ -58,7 +70,7 @@ class MainActivityViewMvc(layoutInflater: LayoutInflater) :
                 })
 
                 txtInputLayout.setEndIconOnClickListener {
-                    val bin = txtInputLayout.editText?.text.toString()
+                    val bin = txtInputLayout.editText?.text.toString().toInt()
                     for (listener in listeners) {
                         listener.onSearchBtnClicked(bin)
                     }
@@ -72,7 +84,7 @@ class MainActivityViewMvc(layoutInflater: LayoutInflater) :
     }
 
 
-    internal class BinAdapter() :
+    internal class BinAdapter(private val onHistoryItemClickListener: (Bin) -> Unit) :
         RecyclerView.Adapter<BinAdapter.BinViewHolder>() {
 
         private var binList: List<Bin> = ArrayList(0)
@@ -89,15 +101,23 @@ class MainActivityViewMvc(layoutInflater: LayoutInflater) :
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BinViewHolder {
             val itemView = LayoutInflater.from(parent.context)
                 .inflate(R.layout.bin_list_item, parent, false)
-            return BinViewHolder(itemView)        }
+            return BinViewHolder(itemView)
+        }
 
         override fun onBindViewHolder(holder: BinViewHolder, position: Int) {
-            holder.title.text = binList[position].bin
+            val binItem = binList[position]
+            holder.title.text = binItem.bin.toString()
+            holder.itemView.setOnClickListener {
+                onHistoryItemClickListener.invoke(binItem)
+            }
         }
 
         override fun getItemCount(): Int {
             return binList.size
         }
+    }
 
+    private fun setBinEditTextData(bin: Int) {
+        binding.binCard.txtInputLayout.editText?.setText(bin.toString())
     }
 }

@@ -10,11 +10,11 @@ class FetchBinData {
     private val binListApi = BinListApi.get()
 
     sealed class Result {
-        class Success(val binData: BinData, val bin: String) : Result()
+        class Success(val binData: BinData, val bin: Int) : Result()
         class Failure(val errorData: String) : Result()
     }
 
-    suspend fun fetchBinData(bin: String): Result {
+    suspend fun fetchBinData(bin: Int): Result {
         return withContext(Dispatchers.IO) {
             try {
                 val response = binListApi.getBinData(bin)

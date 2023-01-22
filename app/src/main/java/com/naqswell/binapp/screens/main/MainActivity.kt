@@ -3,10 +3,8 @@ package com.naqswell.binapp.screens.main
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.naqswell.binapp.db.BinRepository
@@ -59,7 +57,7 @@ class MainActivity : AppCompatActivity(), MainActivityViewMvc.Listener {
         viewMvc.unregisterListener(this)
     }
 
-    private fun fetchBinData(bin: String) {
+    private fun fetchBinData(bin: Int) {
         coroutineScope.launch {
             try {
                 val result = fetchBinData.fetchBinData(bin)
@@ -95,8 +93,8 @@ class MainActivity : AppCompatActivity(), MainActivityViewMvc.Listener {
     }
 
 
-    override fun onSearchBtnClicked(bin: String) {
-        if (bin.length >= 4) {
+    override fun onSearchBtnClicked(bin: Int) {
+        if (bin.toString().length >= 4) {
             fetchBinData(bin)
         } else {
             Snackbar.make(
@@ -106,6 +104,13 @@ class MainActivity : AppCompatActivity(), MainActivityViewMvc.Listener {
             )
                 .setAction("Ok") {}
                 .show()
+        }
+    }
+
+    override fun onClearHistoryBtnClicked() {
+        coroutineScope.launch {
+            binRepository.resetBin()
+            viewMvc.bindBins(binRepository.getBins())
         }
     }
 }

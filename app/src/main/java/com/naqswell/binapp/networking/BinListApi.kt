@@ -1,6 +1,5 @@
 package com.naqswell.binapp.networking
 
-import com.naqswell.binapp.db.BinRepository
 import com.naqswell.binapp.networking.entities.BinData
 import retrofit2.Response
 import retrofit2.Retrofit
@@ -10,7 +9,7 @@ import retrofit2.http.Path
 
 interface BinListApi {
     @GET("/{bin}")
-    suspend fun getBinData(@Path("bin") bin: String): Response<BinData>
+    suspend fun getBinData(@Path("bin") bin: Int): Response<BinData>
 
     companion object {
         private var INSTANCE: Retrofit? = null
